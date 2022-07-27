@@ -6,9 +6,9 @@ const suppliersRouter = require("./suppliers/suppliers.router");
 
 app.use(express.json());
 
-app.use("api/v1/products", productsRouter);
-app.use("api/v1/categories", categoriesRouter);
-app.use("api/v1/suppliers", suppliersRouter);
+app.use("/products", productsRouter);
+app.use("/categories", categoriesRouter);
+app.use("/suppliers", suppliersRouter);
 
 // Not found handler
 app.use((req, res, next) => {
